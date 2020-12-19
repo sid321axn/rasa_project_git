@@ -1,0 +1,794 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - howdy
+    - hii
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - thanks
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - have a good day
+    - good bye
+    - end
+    - stop
+
+- intent: affirm
+  examples: |
+    - yes
+    - yup
+    - yess
+    - yep
+    - yeah
+    - indeed
+    - that's right
+    - ok
+    - great
+    - right, thank you
+    - correct
+    - great choice
+    - sounds really good
+    - yup
+    - ya
+    
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - no. thanks
+    - noo
+    - nope
+    - no. not required
+    - thanks. but not required
+    - naa
+    - i don't require it over mail. thanks
+    - ok thanks
+
+- intent: ask_query
+  examples: |
+    - i'm looking for consultation regarding tax [debt](item)
+    - Please tell me regarding tax [dues](item:debt)
+    - Could you please help me in tax [claim](item:debt)
+    - Could you please help me in tax [claims](item:debt)
+    - Could you please help me in tax [obligation](item:debt)
+    - Could you please help me in tax [delinquencies](item:debt)
+    - i am looking for a help in my tax [obligations](item:debt)
+    - I want help in tax [liability](item:debt)
+    - I am searching for help in [employment taxes](item:employment)
+    - i want to know about tax [lien](item)
+    - could you please tell me about [unfiled tax returns](item: unfiled)
+    - I'm looking for a help in tax [debts](item:debt) related issues
+    - please tell me about tax [lien](item)
+    - please give me details regarding [employment] (item) tax
+    - could you please give me details about [employement](item:employment) tax
+    - please tell me about [professional tax](item:employment)
+    - please tell me about [profession tax](item:employment)
+    - What are your [fees](item) for consultation ?
+    - How much you [charges] (item:fees) for consultation ?
+    - What are the [rates] (item:fees) of your consultation ?
+    - What is the [pricing] (item:fees) of your consultation ?
+    - what is [433] (item)?
+    - what is irs form [433](item)?
+    - what is the need of filing form [433](item)?
+    - what is the use of form [433-a](item)?
+    - what is the purpose of form [433-a](item)?
+    - what is irs form [433-b](item)?
+    - could you please tell me about the purpose of form [433-f](item)?
+    - what is form [433-f](item)
+    - tell me about form [433-d](item)
+    - what is the need of filing form [433-d](item)?
+    - what is form [941](item)?
+    - what is form [941](item) used for?
+    - who must file [941](item)?
+    - what is irs form [504](item)?
+    - what is form [504](item) for
+    - who must file [504](item)?
+    - when do i file form [1040](item)?
+    - what is the need of filing form [1040](item)?
+    - what is irs form [1040](item)?
+    - what is the purpose of a [1040](item) form?
+    - can you tell me about form [1120](item) form?
+    - what is form [1120](item) used for
+    - what is irs form [1120](item)?
+    - what is the purpose of form [1120](item)?
+    - how much I have to [pay] (item:fees) for your consultation ?
+    - What is the [commission] (item:fees) percentage of your consultation ?
+    - What are your consultation [charges](item:fees) ?
+    - What are [fee](item:fees) for the consultation ?
+    - I need help with [employment](item) tax
+    - Can u help me in [payroll](item:employment) taxes ?
+    - [debt](item)
+    - [433](item)
+    - [433-a](item)
+    - [433-b](item)
+    - [433-f](item)
+    - [433-d](item)
+    - [941](item)
+    - [504](item)
+    - [1040](item)
+    - [1120](item)
+    - [Tax Debt](item:debt)
+    - [Unfiled Tax Returns](item:unfiled)
+    - [Tax Audit Representation](item:audit)
+    - [Employment Tax Help](item:employment)
+    - [Tax Lien Help](item:lien)
+    - [delinquencies](item:debt)
+    - [dues](item:debt)
+    - [debts](item:debt)
+    - [claims](item:debt)
+    - [employment](item)
+    - [lien](item)
+    - [unfiled](item)
+    - [Debt](item)
+    - [Employment](item:employment)
+    - [professional](item:employment)
+    - [profession](item:employment)
+    - [Lien](item)
+    - [Unfiled](item)
+    - [fee](item)
+    - [fees](item)
+    - [charge](item)
+    - [charges](item)
+    - [pay](item)
+    - [rates](item)
+    - [commission](item)
+    - please give me info regarding tax [lien](item)
+    - kindly give information regarding tax [debt] (item)
+    - how can you help me in [employment](item) tax related issues
+    - can you help me in finding details regarding [unfiled](item) tax returns
+    - how do i pay my [employment](item) taxes
+
+- intent: faq/doc_type
+  examples: |
+    - what type of documents will the IRS ask for?
+    - which docs will the IRS ask for?
+    - which documents will the IRS ask for? 
+    - could you please tell me important docs to file itr?
+    - which are the crucial documents to file tax claims?
+    - could you please tell me which docs are essential for filing tax claims?
+    - could you please tell me which documents are essential for filing tax returns?
+    - essential documents for filing tax return 
+    - essential documents IRS seeks for ?
+    - what irs documents do i need to keep ?
+    - IRS supporting documents
+    - What documents do I need to keep for IRS?
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- synonym: employment
+  examples: |
+    - employmnt
+    - employement
+    - emplymnt
+    - profession
+    - professional
+    - payroll
+
+- synonym: debt
+  examples: |
+    - dues
+    - debts
+    - liability
+    - arrears
+    - claim
+    - delinqencies
+    - obligations
+    - obligation
+    - claims
+
+- synonym: deadline
+  examples: |
+    - deadlines
+    - cut-off
+    - cut off
+    - time limit
+    - cut of
+    - time frame
+    - finish date
+    - target date
+
+- synonym: fees
+  examples: |
+    - charges
+    - commission
+    - fee
+    - pricing
+    - rates
+    - rate
+    - pay
+
+- intent: out_of_scope
+  examples: |
+    - I want tax info
+    - Can you book me a restaurant
+    - Could you please tell e where is sanfransico
+    - I need advise on my startup
+    - How to become rich ?
+    - how to start new business without risk ?
+
+- intent: faq/tax_relief
+  examples: |
+    - what is tax relief options? 
+    - what is irs tax relief options ? 
+    - how do I get my irs debt forgiven ? 
+    - can we negotiate with irs ?
+
+- intent: faq/boe_cdtfa
+  examples: |
+    - what is boe? 
+    - what is cdtfa ? 
+    - boe 
+    - What is the California Board of Equalization called now ?
+    - Is Cdtfa the same as BOE?
+    - What does Cdtfa mean
+    - sales tax
+    - how do I pay california sales tax?
+    - who collects sales tax in california?
+
+- intent: faq/tax
+  examples: |
+    - what is tax? 
+    - what is a tax in simple words? 
+    - how do you define taxes? 
+    - what do you mean by taxes?
+    - what do you mean by tax?
+
+- intent: faq/innocent_spouse
+  examples: |
+    - tell me about innocent spouse relief? 
+    - tell me about innocent spouses relieves? 
+    - what is innocent spouse relief? 
+    - what is innocent spouse rule?
+    - what qualifies for innocent spouse relief?
+    - how do I file irs innocent spouse relief?
+    - form 8857
+    - innocent spouse relief form
+- intent: faq/irs_tax_lien
+  examples: |
+    - what is irs tax lien? 
+    - what exactly is a tax lien from the irs?
+- intent: faq/irs_officer
+  examples: |
+    - who is irs officer?
+    - who is an irs officer?
+- intent: faq/tax_attorney
+  examples: |
+    - who is tax attorney?
+    - tax attorney
+    - when to hire a tax attorney
+    - tax attorney meaning
+- intent: faq/dave_ramsey
+  examples: |
+    - who is dave ramsey?
+    - what is Dave Ramsey known for?
+    - Who is Dave Ramsey us?
+- intent: faq/mike_habib
+  examples: |
+    - who is mike?
+    - what is mike habib?
+- intent: faq/use_tax
+  examples: |
+    - what is use tax? 
+    - what is use tax only?
+    - what is considered use tax?
+    - what is sales and use tax?
+    - what is sales and use tax representation
+- intent: faq/instal_oic
+  examples: |
+    - even though i am making instalment payments, can i do an offer in compromise?
+    - even though i am making instalment payments, can i do an oic?
+- intent: faq/when_pay_oic
+  examples: |
+    - when do i have to pay the amount being offered in an offer in compromise?
+    - when to pay in an offer in compromise?
+    - when to pay in an oic?
+    - when do I have to pay in offer in compromise?
+    - when do i have to pay the amount being offered in an oic?
+    - when do i have to pay the amount in an offer in compromise?
+    - when do i have to pay the amount in an oic?
+- intent: faq/when_tax_relief
+  examples: |
+    - when to call a tax relief service? 
+    - Are tax relief services worth it? 
+    - Can you negotiate with IRS?
+    - can we negotiate with irs ?
+    - tax relief services
+- intent: faq/why_prof_help
+  examples: |
+    - why do i need a professional help to file back tax returns
+    - do i need professional help in filing itr 
+    - do i need professional help in filing back tax returns
+- intent: faq/oic
+  examples: |
+    - what is offer in compromise
+    - what does offer in compromise mean? 
+    - what is the purpose of offer in compromise
+    - what is the need of offer in compromise
+    - what is oic?
+    - what does oic mean?
+    - what is the purpose of oic?
+    - I am unable to pay my delinquent taxes. Will the IRS accept an offer in compromise?
+- intent: faq/oic_good
+  examples: |
+    - Is an Offer in Compromise best for me? 
+    - Can I go for offer in compromise ? 
+    - What is an appropriate offer in compromise with IRS?
+    - is an offer in compromise right for me?
+- intent: faq/tax_not_paid
+  examples: |
+    - Can I go to jail or prison for not filing my taxes?
+    - Can I go to jail for not filing taxes? 
+    - Can I go to jail for not paying my taxes? 
+    - Can I go to prison for not filing taxes?
+    - What happens if income tax is not filed?
+    - what happens if I don't file income tax return?
+    - can I go to jail for unfiled taxes?
+    - average jail time for tax evasion
+    - What is the jail time for tax evasion?
+- intent: faq/construction_irs_audit
+  examples: |
+    - help with construction irs audit issues
+    - construction irs audit help
+    - irs construction audit guide
+    - irs construction accounting
+    - how to get construction irs audit help
+- intent: faq/aero_audit
+  examples: |
+    - where do i get aerospace audit related help?
+    - help with aerospace irs audit issues
+    - aerospace audit guide
+    - irs aerospace accounting
+    - aerospace audit help
+    - how to get aerospace audit help
+- intent: faq/missed_deadline
+  examples: |
+    - i missed the tax deadline what should i do
+    - If I missed the tax deadline what should I do now ?
+    - If I missed the cut-off date to file tax returns what should I do now ?
+    - I missed the deadline to file tax returns what to do ?
+    - In the event of missed deadline to file tax return what to do ?
+    - In case if the time limit to file the tax return is over what to do now ?
+    - What to do if target date to file income tax expires?
+    - In case if I missed the tax deadline what should i do?
+- intent: faq/unfiled_back_tax
+  examples: |
+    - what to do if i have unfilled back tax returns 
+    - unfiled tax returns
+    - What do I do if I have unfiled tax returns?
+- intent: faq/not_pay_taxes
+  examples: |
+    - what will happen if an individual or a business taxpayer can not or refuses to pay their taxes 
+    - what will happen if I refuse to pay my taxes
+    - Can I choose to not pay taxes?
+    - what happens if a business does not pay taxes?
+    - what happens if a business does not file taxes
+    - what happens if I fail to pay my annual taxes brainly
+    - what happens if a business doesn't pay taxes
+- intent: faq/how_to_contact
+  examples: |
+    - how can i contact you
+    - how do I contact you
+    - how can I reach you
+    - how should I contact you
+    - what is the best way to contact you
+    - what would be the best way to contact you
+- intent: faq/how_to_help
+  examples: |
+    - how can you help me
+    - how do I ask for help
+    - can you help me
+    - could you please help me
+    - help
+    - I need your help
+- intent: faq/tax_debt
+  examples: |
+    - tax debt help
+    - how can I get rid of my tax debt?
+    - how do I get rid of my tax debt?
+    - how to get out of tax debt
+    - income tax debt help
+    - what do I do if I can't pay my taxes?
+    - how can I get rid of my irs debt?
+    - how do I resolve my irs debt?
+- intent: faq/back_tax
+  examples: |
+    - back tax help
+    - how can you help me with back taxes?
+    - where to turn for back tax help
+    - help with back tax issues
+    - how do I get rid of my back tax?
+    - how to get out of back tax
+    - how can I fix my back taxes?
+    - what do I do if I can't pay my back taxes?
+    - how can I get rid of my back tax?
+    - how do I resolve my back tax?
+    - back taxes help near me?
+- intent: faq/irs_tax
+  examples: |
+    - irs tax help
+    - irs tax help line
+    - How do I resolve an issue with the IRS?
+    - can you help me with my tax problems?
+    - how do i fix my tax problems
+    - how to get irs tax help
+- intent: faq/landscape
+  examples: |
+    - how to get landscape irs tax audits help
+    - how can you help me with architects and landscape architects irs tax audit
+    - how to get landscape architects irs tax audits help 
+    - landscape irs tax audits help 
+    - landscape architects irs tax audits help
+- intent: faq/art_gallery
+  examples: |
+    - how to get art galleries irs audit tax help
+    - art galleries irs audit tax help
+    - sale of art tax consequences
+    - selling art tax implications
+- intent: faq/how_employment_tax
+  examples: |
+    - how do i pay my employment taxes
+    - how do I pay payroll taxes to the IRS?
+    - how to pay payroll taxes
+    - do I have to pay taxes on employment?
+    - how should i pay employment tax
+- intent: faq/entertainment_tax
+  examples: |
+    - how to get entertainment industry irs tax audit help 
+    - how can you help me with entertainment industry irs tax audit
+    - entertainment industry irs tax audit help
+- intent: faq/stop_lien
+  examples: |
+    - how to stop and release irs lien 
+    - will the IRS withdraw a lien?
+    - how do I remove an IRS tax lien?
+    - how do I know if the IRS has a lien on my property?
+    - can I sell my house if the IRS has a lien on it?
+    - does a property lien affect your credit score?
+    - what happens after a tax lien is filed?
+    - does a tax lien affect your bank account?
+- intent: faq/stop_wage_levy
+  examples: |
+    - how to stop and release wage levy 
+    - how to stop and release wage garnishment 
+    - how to stop irs levy on wages
+    - how long does an irs wage levy last?
+    - how much can irs levy from my wages?
+    - how do I remove a levy from my account?
+    - how long until IRS garnished wages?
+    - can wage garnishment affect tax refund?
+    - what is the maximum amount the irs can garnish from your paycheck?
+- intent: faq/941_tax_prob
+  examples: |
+    - how to deal with 941 payroll tax problems
+    - how do I correct my 941?
+    - how to resolve 941 payroll tax problem
+    - how to solve 941 tax problem
+    - 941 payroll tax problem
+    - how to solve payroll tax problems
+- intent: faq/pay_back_tax
+  examples: |
+    - how do i pay my back taxes
+    - how do I pay back taxes to the IRS?
+    - how to pay back taxes
+    - how do I settle my back taxes
+    - how do I settle back taxes with the irs
+    - how to settle back taxes
+    - how can I pay back taxes
+    - how do I pay off back taxes
+- intent: faq/tax_settlement
+  examples: |
+    - how can i do tax settlement
+    - how does a tax settlement work?
+    - tax settlement services
+    - can you help me in tax settlement
+    - how to settle state tax debt
+    - irs tax settlement
+    - what is tax settlements
+- intent: faq/enrol_agent
+  examples: |
+    - what is enrolled agent
+    - do enrolled agents work for the IRS?
+    - what enrolled agent can do
+    - what does an enrolled agent do
+    - what does an enrolled agent mean
+    - what is enrolled agent irs
+    - what does enrolled agent mean
+- intent: faq/bankruptcy
+  examples: |
+    - what is irs bankruptcy 
+    - what do you mean by irs bankruptcy
+    - does IRS debt go away with bankruptcy?
+    - how bad is filing for bankruptcy?
+    - does filing bankruptcy eliminate tax debt
+    - will filing bankruptcy stop IRS debt?
+    - does filing bankruptcy affect my taxes
+- intent: faq/payroll_represent
+  examples: |
+    - what is payroll tax problem representation
+    - payroll tax representation
+- intent: faq/payroll_problem
+  examples: |
+    - what is tax problem
+    - what is payroll tax problem
+- intent: faq/stop_bank_levy
+  examples: |
+    - how to stop and release bank levy
+    - how do I remove a levy from my bank account?
+    - Can a bank levy be reversed?
+    - how do you stop a bank levy?
+- intent: faq/itr_file_help
+  examples: |
+    - how can you help filing income tax return
+    - how can I file my income tax return 2020?
+    - how can I file my income tax return 2021?
+    - need to file income tax return
+    - could you please help me in filing income tax return
+    - could you please help me in filing itr?
+- intent: faq/irs_ro
+  examples: |
+    - what is irs ro officer?
+    - what is irs revenue officer?
+    - what can revenue officer do?
+    - how to deal with irs revenue officer
+    - what is a revenue officer
+- intent: faq/tax_levy
+  examples: |
+    - what is tax levy?
+    - what is irs levy?
+    - what is irs tax levy?
+    - what is tax levy mean?
+    - what is tax levy on property
+    - what does it mean to levy a tax?
+    - what is a tax levy on my paycheck?
+- intent: faq/tax_audit_defense
+  examples: |
+    - what is tax audit defense?
+    - what does audit defense mean?
+    - what is tax audit representation?
+    - who can represent the taxpayer at an IRS audit?
+- intent: faq/wage_attachment
+  examples: |
+    - what is wage attachment information?
+    - what is wage garnishment?
+    - can you settle a wage garnishment?
+    - what is irs wage garnishment?
+    - how to avoid irs wage garnishment
+    - how to avoid irs wage garnishment in california
+- intent: faq/penalty_abatement
+  examples: |
+    - what is penalty abatement?
+    - what is penalty abatement irs?
+    - can you settle a wage garnishment?
+    - what is irs wage garnishment?
+    - what does penalty abatement mean
+    - what is reasonable cause for penalty abatement
+    - how to get irs penalties waived
+- intent: faq/tax_prep
+  examples: |
+    - what is tax preparation service?
+    - what does a tax preparation service do?
+    - Is it better to have your taxes done professionally?
+    - tax preparation service
+- intent: faq/tax_debt_relief
+  examples: |
+    - what is tax debt relief services
+    - Are tax relief services worth it?
+    - how much does tax debt relief cost?
+    - what is tax debt relief company
+    - Can you settle state tax debt?
+- intent: faq/tax_relief_services
+  examples: |
+    - what is tax relief service
+    - how do tax relief services work?
+    - what is the meaning of tax relief?
+    - tax relief services
+- intent: faq/prof_tax_prep
+  examples: |
+    - what is professional tax preparation services?
+    - what are cons of professional tax preparers?
+    - What is a professional tax preparer?
+    - Is it worth it to hire a tax professional?
+    - why should I use a professional tax preparer?
+    - benefits of hiring a tax professional
+    - benefits of tax preparation services
+- intent: faq/income_tax_right
+  examples: |
+    - what is income tax preparation done right
+    - how to rightly prepare tax return
+- intent: faq/tax_plan_doctors
+  examples: |
+    - what is tax planning for medical professionals
+    - are doctors exempt from income tax?
+    - tax planning for doctors
+    - tax benefits for doctors
+    - how can doctors reduce their taxes?
+    - what expenses can doctors claim against tax?
+    - tax for medical practitioners
+- intent: faq/edd_tax_audit
+  examples: |
+    - what is edd tax audits 
+    - what is tax audits
+    - Is Edd getting audited?
+    - what triggers an EDD benefit audit?
+    - what does it mean if your taxes are audited?
+    - what triggers an edd audit
+    - what is an EDD benefit audit?
+    - what triggers an edd benefit audit
+    - edd audit advice
+- intent: faq/back_tax_payment_serv
+  examples: |
+    - what is back tax payment services
+    - what is irs back tax payment services
+    - can you tell me about back tax payment service
+    - I wanna know about back tax payment service
+- intent: faq/irs_tax_audit_services
+  examples: |
+    - what is irs tax audit services
+    - what is tax audit services
+    - what causes you to get audited by the IRS?
+    - what is an audit from IRS?
+    - can you tell me about tax audit services?
+    - irs tax audit help
+    - tax audit help
+- intent: faq/tax_forgive_program
+  examples: |
+    - what is irs tax forgiveness program
+    - how do I get my IRS debt forgiven?
+    - what is the IRS debt forgiveness program?
+    - does the IRS forgive tax debt?
+    - can you tell me about irs tax forgiveness program?
+    - can you negotiate with irs about taxes
+    - I wanna know about irs tax forgiveness program
+    - can you tell me about tax forgiveness program
+- intent: faq/tax_resolution
+  examples: |
+    - what is tax resolution services
+    - what is irs tax resolution
+    - can you tell me about tax resolution services
+    - what is tax resolution
+    - can you tell me about tax resolution services
+    - I wanna know about irs tax resolution services
+- intent: faq/installment_agreement
+  examples: |
+    - what is installment agreement
+    - how does IRS installment agreement work?
+    - what does installment agreement mean?
+    - How long does it take for IRS to approve installment agreement?
+    - what is the minimum monthly payment for an IRS installment plan?
+    - I wanna know about installment agreement
+    - what is the fee for IRS installment agreement?
+- intent: faq/us_expat_tax
+  examples: |
+    - what is us expat tax service
+    - What is expat tax return?
+    - How can I avoid paying US taxes abroad?
+    - american expat tax services
+    - what is american expat tax services
+    - What happens if you don't file taxes while living abroad?
+    - Do us citizens pay taxes on foreign income?
+    - Do american citizens pay taxes on foreign income?
+    - How much tax do American expats pay?
+    - u.s. citizens living abroad taxes
+    - do u.s. citizens living abroad need to file state taxes
+    - Do US citizens living abroad pay state taxes?
+    - Do I have to file state taxes if I don't live there?
+    - Do expats have to pay US taxes?
+    - How do I file taxes as a US citizen living abroad?
+- intent: faq/clergy_tax
+  examples: |
+    - what is clergy tax service
+    - clergy tax preparation
+    - clergy tax return
+    - How do I file taxes for clergy?
+    - How do taxes work for pastors?
+    - Are pastors required to pay taxes?
+- intent: faq/tax_planning
+  examples: |
+    - what is tax planning service
+    - how do I plan my taxes
+    - how to plan my taxes
+    - can you help me in planning my taxes?
+    - I want tax planning service
+    - can you tell me about tax planning services
+    - tax planning for companies
+- intent: faq/tfrp
+  examples: |
+    - what is tfrp
+    - what is trust fund recovery penalty
+    - can you tell me about tfrp
+    - could you please tell me about trust fund recovery penalty
+    - I wanna know about trust fund recovery penalty
+    - what is the meaning of trust fund recovery penalty
+    - what is the meaning of tfrp
+    - do you know about tfrp
+    - do you know about trust fund recovery penalty
+- intent: faq/irs_tax_penalty
+  examples: |
+    - what are the irs tax penalties
+    - what is irs tax penalty
+    - What penalties can the IRS impose?
+- intent: faq/bank_levy_release
+  examples: |
+    - do you know about bank levy release
+    - What happens when a bank account is levied?
+    - how long does a bank levy last
+    - if my bank account is levied can i open a new account
+    - how long does a bank levy last in california
+    - how does a bank levy work in california
+- intent: faq/irs_tax_audit
+  examples: |
+    - what is irs tax audits
+    - what is irs tax audit
+    - what do you mean by irs tax audits
+    - what is tax audit
+    - what happen in irs tax audits
+    - can you tell me about irs tax audits?
+    - irs tax audits
+    - tax audit
+- intent: faq/cdp_appeal
+  examples: |
+    - what are collection due process appeals
+    - what is cdp
+    - what is collection due process
+    - how long does it take to get a cdp hearing
+    - What is a CDP hearing?
+    - what is a collection due process hearing
+    - What is an IRS CDP hearing?
+    - collection appeals program
+- intent: faq/tax_lien
+  examples: |
+    - what is tax lien
+    - What does it mean to have a tax lien?
+    - what is a state tax lien
+    - tax lien
+    - what is a federal tax lien
+    - what is tax lien means
+    - What causes a tax lien?
+    - What is the meaning of tax lien?
+    - How do I know if I have a tax lien against me?
+- intent: faq/payroll_941_tax
+  examples: |
+    - what is payroll 941 tax 
+    - payroll 941 tax
+    - What is meant by a payroll tax?
+    - What is meant by a payroll 941 tax?
+    - What is 941 payroll tax?
+    - i wanna know about 941 payroll tax
+    - can you tell me about 941 tax
+    - What is the meaning of tax lien?
+    - can you tell me about 941 payroll tax
