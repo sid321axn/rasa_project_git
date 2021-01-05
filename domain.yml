@@ -20,30 +20,30 @@ responses:
   utter_greet_ask:
   - buttons:
     - title: Tax Debt
-    - payload: Tax Debt
+      payload: Tax Debt
     - title: Unfiled Tax Returns
-    - payload: Unfiled Tax Returns
+      payload: Unfiled Tax Returns
     - title: Tax Audit Representation
-    - payload: Tax Audit Representation
+      payload: Tax Audit Representation
     - title: Employment Tax Help
-    - payload: Employment Tax Help
+      payload: Employment Tax Help
     - title: Tax Lien Help
-    - payload: Tax Lien Help
+      payload: Tax Lien Help
     text: Hi, I am Syra, your digital assistant. Select your query from the below
       list of topics or type in your query directly. In case, you need to see FAQs
       visit [here](https://www.myirstaxrelief.com/faqs.html)
   utter_ask_again:
   - buttons:
     - title: Tax Debt
-    - payload: Tax Debt
+      payload: Tax Debt
     - title: Unfiled Tax Returns
-    - payload: Unfiled Tax Returns
+      payload: Unfiled Tax Returns
     - title: Tax Audit Representation
-    - payload: Tax Audit Representation
+      payload: Tax Audit Representation
     - title: Employment Tax Help
-    - payload: Employment Tax Help
+      payload: Employment Tax Help
     - title: Tax Lien Help
-    - payload: Tax Lien Help
+      payload: Tax Lien Help
     text: Could you please choose from below options what you are exactly looking
       for?
   utter_did_that_help:
