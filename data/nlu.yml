@@ -108,6 +108,7 @@ nlu:
     - tell me about form [433-d](item)
     - what is the need of filing form [433-d](item)?
     - what is form [941](item)?
+    - what is the use of form [433](item)?
     - what is form [941](item) used for?
     - who must file [941](item)?
     - what is irs form [504](item)?
@@ -117,7 +118,7 @@ nlu:
     - what is the need of filing form [1040](item)?
     - what is irs form [1040](item)?
     - what is the purpose of a [1040](item) form?
-    - can you tell me about form [1120](item) form?
+    - could you tell me about form [1120](item) form?
     - what is form [1120](item) used for
     - what is irs form [1120](item)?
     - what is the purpose of form [1120](item)?
@@ -234,7 +235,6 @@ nlu:
 
 - intent: out_of_scope
   examples: |
-    - I want tax info
     - Can you book me a restaurant
     - Could you please tell e where is sanfransico
     - I need advise on my startup
@@ -263,6 +263,9 @@ nlu:
 - intent: faq/tax
   examples: |
     - what is tax? 
+    - definition of tax
+    - what is the definition of tax?
+    - could you please tell me about tax?
     - what is a tax in simple words? 
     - how do you define taxes? 
     - what do you mean by taxes?
@@ -295,12 +298,17 @@ nlu:
 - intent: faq/dave_ramsey
   examples: |
     - who is dave ramsey?
+    - please tell me about dave ramsey
+    - could please tell me about dave ramsey?
     - what is Dave Ramsey known for?
     - Who is Dave Ramsey us?
 - intent: faq/mike_habib
   examples: |
     - who is mike?
     - what is mike habib?
+    - could you please tell me about mike?
+    - please tell me about mike
+    - tell e about mike habib
 - intent: faq/use_tax
   examples: |
     - what is use tax? 
