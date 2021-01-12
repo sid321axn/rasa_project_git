@@ -4,23 +4,36 @@ nlu:
 
 - intent: order
   examples: |
-    - i'm looking for my order
-    - Where are my order
+    - i'm looking for my order?
+    - Where are my [cancelled](order_type)?
+    - where are my order?
     - Track my order 
+    - Track my [closed](order_type)
+    - Track my [cancelled](order_type)
     - please help me in tracking my order
-    - What are my open orders
-    - What are my closed order
-    - What are my cancelled orders
-    - what is the status of my open order
-    - what is the status of my closed order
-    - what is the status of my cancelled order
+    - What are my [open](order_type) orders
+    - What are my [closed](order_type) order?
+    - What are my [cancelled](order_type) orders
+    - What are my [cancel](order_type:cancelled) orders?
+    - what is the status of my [open](order_type)?
+    - what is the status of my [close](order_type:closed)
+    - what is the status of my [cancelled](order_type)?
     - what is the status of my order
-    - what is the current status of my order
-    - could you please track my order
-    - how can I track my order
-    - what is the status of my cancelled order
+    - what is the current status of my [open](order_type)?
+    - could you please track my [open](order_type)
+    - help me in tracking my [close](order_type:closed)
+    - please help me tracking my [cancelled](order_type)?
+    - how can I track my order?
+    - how can I track my [cancelled](order_type)?
+    - how can I track my [closed](order_type)
+    - how can I track my [open](order_type)?
+    - what is the status of my [cancelled](order_type)
     - I want to track my order
     - order
+    - [open](order_type) orders
+    - [closed](order_type) order
+    - [cancelled](order_type) order
+    - [cancel](order_type:cancelled) orders
     
 
 - intent: subscribe

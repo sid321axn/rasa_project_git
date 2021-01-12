@@ -6,13 +6,66 @@ stories:
   steps:
   - intent: order
   - action: action_result
-  
 
+- story: happy path11
+  steps:
+  - intent: order 
+    entities:
+    - item: "Open"
+  - slot_was_set:
+    - item: "open"
+  - action: action_result
+  
 - story: happy path2
   steps:
   - intent: promotion
   - action: action_result
+
+- story: happy path22
+  steps:
+  - intent: order 
+    entities:
+    - item: "closed"
+  - slot_was_set:
+    - item: "closed"
+  - action: action_result
+
+- story: happy path33
+  steps:
+  - intent: order 
+    entities:
+    - item: "cancel"
+  - slot_was_set:
+    - item: "cancelled"
+  - action: action_result
+
+- story: happy path44
+  steps:
+  - intent: order 
+    entities:
+    - item: "cancelled"
+  - slot_was_set:
+    - item: "cancelled"
+  - action: action_result
+
+
+- story: happy path55
+  steps:
+  - intent: order 
+    entities:
+    - item: "close"
+  - slot_was_set:
+    - item: "closed"
+  - action: action_result
   
+- story: happy path66
+  steps:
+  - intent: order 
+    entities:
+    - item: "open"
+  - slot_was_set:
+    - item: "open"
+  - action: action_result  
 
 - story: happy path3
   steps:
