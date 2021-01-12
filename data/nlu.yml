@@ -5,35 +5,35 @@ nlu:
 - intent: order
   examples: |
     - i'm looking for my order?
-    - Where are my [cancelled](order_type)?
+    - Where are my [cancelled](item)?
     - where are my order?
     - Track my order 
-    - Track my [closed](order_type)
-    - Track my [cancelled](order_type)
+    - Track my [closed](item)
+    - Track my [cancelled](item)
     - please help me in tracking my order
-    - What are my [open](order_type) orders
-    - What are my [closed](order_type) order?
-    - What are my [cancelled](order_type) orders
-    - What are my [cancel](order_type:cancelled) orders?
-    - what is the status of my [open](order_type)?
-    - what is the status of my [close](order_type:closed)
-    - what is the status of my [cancelled](order_type)?
+    - What are my [open](item) orders
+    - What are my [closed](item) order?
+    - What are my [cancelled](item) orders
+    - What are my [cancel](item:cancelled) orders?
+    - what is the status of my [open](item)?
+    - what is the status of my [close](item:closed)
+    - what is the status of my [cancelled](item)?
     - what is the status of my order
-    - what is the current status of my [open](order_type)?
-    - could you please track my [open](order_type)
-    - help me in tracking my [close](order_type:closed)
-    - please help me tracking my [cancelled](order_type)?
+    - what is the current status of my [open](item)?
+    - could you please track my [open](item)
+    - help me in tracking my [close](item:closed)
+    - please help me tracking my [cancelled](item)?
     - how can I track my order?
-    - how can I track my [cancelled](order_type)?
-    - how can I track my [closed](order_type)
-    - how can I track my [open](order_type)?
-    - what is the status of my [cancelled](order_type)
+    - how can I track my [cancelled](item)?
+    - how can I track my [closed](item)
+    - how can I track my [open](item)?
+    - what is the status of my [cancelled](item)
     - I want to track my order
     - order
-    - [open](order_type) orders
-    - [closed](order_type) order
-    - [cancelled](order_type) order
-    - [cancel](order_type:cancelled) orders
+    - [open](item) orders
+    - [closed](item) order
+    - [cancelled](item) order
+    - [cancel](item:cancelled) orders
     
 
 - intent: subscribe

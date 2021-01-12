@@ -11,9 +11,9 @@ stories:
   steps:
   - intent: order 
     entities:
-    - order_type: "Open"
+    - item: "Open"
   - slot_was_set:
-    - order_type: "open"
+    - item: "open"
   - action: action_result
   
 - story: happy path2
@@ -25,27 +25,27 @@ stories:
   steps:
   - intent: order 
     entities:
-    - order_type: "closed"
+    - item: "closed"
   - slot_was_set:
-    - order_type: "closed"
+    - item: "closed"
   - action: action_result
 
 - story: happy path33
   steps:
   - intent: order 
     entities:
-    - order_type: "cancel"
+    - item: "cancel"
   - slot_was_set:
-    - order_type: "cancelled"
+    - item: "cancelled"
   - action: action_result
 
 - story: happy path44
   steps:
   - intent: order 
     entities:
-    - order_type: "cancelled"
+    - item: "cancelled"
   - slot_was_set:
-    - order_type: "cancelled"
+    - item: "cancelled"
   - action: action_result
 
 
@@ -53,18 +53,18 @@ stories:
   steps:
   - intent: order 
     entities:
-    - order_type: "close"
+    - item: "close"
   - slot_was_set:
-    - order_type: "closed"
+    - item: "closed"
   - action: action_result
   
 - story: happy path66
   steps:
   - intent: order 
     entities:
-    - order_type: "open"
+    - item: "open"
   - slot_was_set:
-    - order_type: "open"
+    - item: "open"
   - action: action_result  
 
 - story: happy path3
