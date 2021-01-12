@@ -9,6 +9,10 @@ intents:
 - customer_support
 - recommended_products
 entities:
-- order_type
+- item
+slots:
+  item:
+    type: unfeaturized
+    influence_conversation: false
 actions:
 - action_result
