@@ -12,7 +12,7 @@ entities:
 - item
 slots:
   item:
-    type: unfeaturized
+    type: text
     influence_conversation: false
 actions:
 - action_result
