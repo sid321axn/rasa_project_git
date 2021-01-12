@@ -9,6 +9,6 @@ intents:
 - customer_support
 - recommended_products
 entities:
-- item
+- order_type
 actions:
 - action_result
