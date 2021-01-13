@@ -2,9 +2,13 @@ version: "2.0"
 
 stories:
 
-- story: happy path1
+- story: happy path order
   steps:
-  - intent: order
+   - intent: order
+    entities:
+    - order_type: Null
+  - slot_was_set:
+    - order_type: Null
   - action: action_result
 
 - story: happy path11
@@ -16,9 +20,13 @@ stories:
     - item: "open"
   - action: action_result
   
-- story: happy path2
+- story: happy path promotion
   steps:
-  - intent: promotion
+   - intent: promotion
+    entities:
+    - order_type: Null
+  - slot_was_set:
+    - order_type: Null
   - action: action_result
 
 - story: happy path22
@@ -67,32 +75,52 @@ stories:
     - item: "open"
   - action: action_result  
 
-- story: happy path3
+- story: happy path subscribe
   steps:
-  - intent: subscribe
+   - intent: subscribe
+    entities:
+    - order_type: Null
+  - slot_was_set:
+    - order_type: Null
   - action: action_result
   
 
-- story: happy path4
+- story: happy path promotion 2
   steps:
-  - intent: promotion
+   - intent: promotion
+    entities:
+    - order_type: Null
+  - slot_was_set:
+    - order_type: Null
   - action: action_result
   
 
-- story: happy path5
+- story: happy path return policy
   steps:
-  - intent: return_policy
+   - intent: return_policy
+    entities:
+    - order_type: Null
+  - slot_was_set:
+    - order_type: Null
   - action: action_result
   
-- story: happy path6
+- story: happy path customer support
   steps:
-  - intent: customer_support
+   - intent: customer_support
+    entities:
+    - order_type: Null
+  - slot_was_set:
+    - order_type: Null
   - action: action_result
   
 
-- story: happy path7
+- story: happy path recommended products
   steps:
-  - intent: recommended_products
+   - intent: recommended_products
+    entities:
+    - order_type: Null
+  - slot_was_set:
+    - order_type: Null
   - action: action_result
   
 
